@@ -1,4 +1,8 @@
-import { print } from './utils.js';
+import { print } from "./utils.js";
 
-console.log('Hello from main.js');
-print('hello');
+class Demo {
+  test() {}
+}
+
+console.log("Hello from main.js");
+print("hello");
