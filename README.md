@@ -18,6 +18,6 @@
 * [React Router](https://reacttraining.com/react-router/)
 * [ParcelJS](https://parceljs.org/)
 * [Redux](https://redux.js.org/)
-* []()
+* [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en-US)
 * []()
 * []()
