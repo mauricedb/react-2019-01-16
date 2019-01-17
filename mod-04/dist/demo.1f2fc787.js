@@ -104,9 +104,89 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"src/demo.js":[function(require,module,exports) {
+})({"src/actions.js":[function(require,module,exports) {
+"use strict";
 
-},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.createIncrementAction = createIncrementAction;
+
+function createIncrementAction() {
+  var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  var action = {
+    type: 'INCREMENT',
+    payload: {
+      value: value
+    },
+    error: null
+  };
+  return action;
+}
+},{}],"src/store.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.subscribe = subscribe;
+exports.dispatch = dispatch;
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var store = {
+  counter: 0,
+  name: 'Maurice'
+};
+var listeners = [];
+
+function subscribe(listener) {
+  listeners.push(listener);
+  return function () {
+    return listeners = listeners.filter(function (l) {
+      return l !== listener;
+    });
+  };
+}
+
+function dispatch(action) {
+  console.log('dispatch', action);
+
+  if (action.type === 'INCREMENT') {
+    // Fout
+    // store.counter = store.counter + action.payload.value;
+    // store = Object.assign({}, store, {
+    //   counter: store.counter + action.payload.value
+    // });
+    store = _objectSpread({}, store, {
+      counter: store.counter + action.payload.value
+    });
+  }
+
+  listeners.forEach(function (l) {
+    return l(store);
+  });
+}
+},{}],"src/demo.js":[function(require,module,exports) {
+"use strict";
+
+var _actions = require("./actions");
+
+var _store = require("./store");
+
+var unsub = (0, _store.subscribe)(function (state) {
+  return console.log('Listener 1 ', state);
+});
+(0, _store.dispatch)((0, _actions.createIncrementAction)());
+(0, _store.subscribe)(function (state) {
+  return console.log('Listener 2 ', state);
+});
+(0, _store.dispatch)((0, _actions.createIncrementAction)(5));
+unsub();
+(0, _store.dispatch)((0, _actions.createIncrementAction)(15));
+},{"./actions":"src/actions.js","./store":"src/store.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -133,7 +213,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54490" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50945" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -276,3 +356,4 @@ function hmrAccept(bundle, id) {
   });
 }
 },{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/demo.js"], null)
+//# sourceMappingURL=/demo.1f2fc787.map
