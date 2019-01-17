@@ -19,5 +19,8 @@
 * [ParcelJS](https://parceljs.org/)
 * [Redux](https://redux.js.org/)
 * [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en-US)
-* []()
+* [Formik](https://jaredpalmer.com/formik/)
+* [Yup](https://github.com/jquense/yup)
+* [Migrate Jest to TypeScript](https://github.com/facebook/jest/pull/7554)
+
 * []()
