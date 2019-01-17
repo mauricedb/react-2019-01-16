@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createIncrementAction } from '../store/actions';
 
 class Counter extends Component {
   render() {
@@ -17,4 +19,18 @@ class Counter extends Component {
   }
 }
 
-export default Counter;
+function mapStateToProps(state) {
+  return {
+    count: state.counter
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    increment: (value = 1) => dispatch(createIncrementAction(value))
+  };
+}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Counter);

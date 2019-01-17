@@ -6,7 +6,6 @@
 * [Yarn](https://yarnpkg.com/en/)
 * [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en-US&utm_source=chrome-ntp-launcher)
 * [Razzle](https://github.com/jaredpalmer/razzle)
-
 * [Create React App](https://facebook.github.io/create-react-app/)
 * [NPM](https://www.npmjs.com/)
 * [NPM Search](https://npms.io/)
@@ -16,8 +15,9 @@
 * [TypeScript](http://www.typescriptlang.org/)
 * [Can I Use](https://caniuse.com/)
 * [NPM Check Updates](https://github.com/tjunnone/npm-check-updates)
-
 * [React Router](https://reacttraining.com/react-router/)
-
 * [ParcelJS](https://parceljs.org/)
+* [Redux](https://redux.js.org/)
+* []()
+* []()
 * []()
