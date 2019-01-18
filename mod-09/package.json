@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "next"
+  },
   "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
     "next": "^7.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
