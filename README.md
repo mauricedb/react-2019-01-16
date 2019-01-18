@@ -1,4 +1,4 @@
-# react-2019-01-16
+# React 2019-01-16
 
 * [React website](https://reactjs.org/)
 * [NodeJS](https://nodejs.org/en/)
@@ -23,5 +23,9 @@
 * [Formik](https://jaredpalmer.com/formik/)
 * [Yup](https://github.com/jquense/yup)
 * [Migrate Jest to TypeScript](https://github.com/facebook/jest/pull/7554)
+* [Jest](https://jestjs.io/en/)
+* [Enzyme](https://airbnb.io/enzyme/)
+* [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+* [Next.js](https://nextjs.org/)
+* [Create Next App](https://www.npmjs.com/package/create-next-app)
 
-* []()

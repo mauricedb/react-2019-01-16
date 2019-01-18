@@ -1,13 +1,18 @@
 import React from 'react';
 import errorBoundary from './errorBoundary';
 import { shape, string, arrayOf } from 'prop-types';
+import css from './SelectedMovie.module.css';
 
 const SelectedMovie = ({ selected, onMovieCleared }) => (
-  <div className="details">
-    <div className="detail">
-      <div className="detail-header">
+  <div className={css.details}>
+    <div className={css.detail}>
+      <div className={css['detail-header']}>
         <h4>{selected.title}</h4>
-        <span className="close-button" role="button" onClick={onMovieCleared}>
+        <span
+          className={css['close-button']}
+          role="button"
+          onClick={onMovieCleared}
+        >
           &times;
         </span>
       </div>
@@ -31,7 +36,6 @@ SelectedMovie.propTypes = {
   }).isRequired
 };
 
-
-SelectedMovie.displayName = 'SelectedMovie'
+SelectedMovie.displayName = 'SelectedMovie';
 
 export default errorBoundary(SelectedMovie);
