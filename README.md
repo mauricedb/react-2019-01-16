@@ -1,5 +1,7 @@
 # React 2019-01-16
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mauricedb/react-2019-01-16.svg)](https://greenkeeper.io/)
+
 * [React website](https://reactjs.org/)
 * [NodeJS](https://nodejs.org/en/)
 * [NPM](https://npms.io/)
